@@ -25,47 +25,62 @@ Add below line in build.gradle file
         }
 
 Add Below Permissions and Features in Manifest File
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+        <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+        <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- Camera/Microphone -->
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-feature
+            android:name="android.hardware.bluetooth"
+            android:required="false" />
 
-Features:
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.autofocus"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.flash"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.front"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.usb.accessory"
-        android:required="false" />
+        <uses-permission android:name="android.permission.CAMERA" />
 
-Permissions:
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <!--
-    Used by PSTN calling to dial directly rather than open the dialer
-    This has proven to be the only reliable way to ensure Samsung phones are able to
-    dial into meetings over PSTN with the dial sequence.
-    -->
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.READ_CALENDAR" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
-    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+        <uses-feature
+            android:name="android.hardware.camera"
+            android:required="false" />
+        <uses-feature
+            android:name="android.hardware.camera.autofocus"
+            android:required="false" />
+        <uses-feature
+            android:name="android.hardware.camera.flash"
+            android:required="false" />
+        <uses-feature
+            android:name="android.hardware.camera.front"
+            android:required="false" />
+        <uses-feature
+            android:name="android.hardware.usb.accessory"
+            android:required="false" />
+
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.BLUETOOTH" />
+        <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        <uses-permission android:name="android.permission.VIBRATE" />
+        <!--
+        Used by PSTN calling to dial directly rather than open the dialer
+        This has proven to be the only reliable way to ensure Samsung phones are able to
+        dial into meetings over PSTN with the dial sequence.
+        -->
+        <uses-permission android:name="android.permission.CALL_PHONE" />
+        <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+        <uses-permission android:name="android.permission.READ_CALENDAR" />
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+        <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+        <uses-permission android:name="android.permission.WAKE_LOCK" />
+        <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+        <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+        <uses-feature
+            android:name="android.hardware.telephony"
+            android:required="false" />
 
 Description:
     In this project able to call or connect call through webex sdk as a guest user or webex login user,
