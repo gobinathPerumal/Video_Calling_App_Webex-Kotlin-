@@ -1,0 +1,2 @@
+rootProject.name = "video_call_webex"
+include ':app'
