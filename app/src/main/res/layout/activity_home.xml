@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:id="@+id/signInContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
+        tools:alpha="1"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@android:drawable/presence_video_online" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/iltoken"
+            style="@style/AppTheme.InputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="JWT Token"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@id/etEmail"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etToken"
+                style="@style/AppTheme.InputEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:lines="1"
+                android:theme="@style/AppTheme.InputEditTextStyle" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ilEmail"
+            style="@style/AppTheme.InputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="User Name"
+            android:imeOptions="actionNext"
+            android:visibility="visible">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                style="@style/AppTheme.InputEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:theme="@style/AppTheme.InputEditTextStyle" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="login"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:id="@+id/btnSwitchLogin"
+            android:backgroundTint="@color/white"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="join_as_guest"
+            android:textSize="@dimen/dimen_16sp"
+            android:textColor="@color/colorAccent" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:indeterminate="true"
+            android:theme="@style/ContentLoadingProgressBarStyle"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</LinearLayout>
